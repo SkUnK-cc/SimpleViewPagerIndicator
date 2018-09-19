@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import com.example.hp.simpleviewpagerindicator.custom.SimpleIndicator
 
 
@@ -44,8 +43,6 @@ class MainActivity : AppCompatActivity() {
              * 从第二项滚动到第一项是，滚动前position为1，滚动时position为0,offset由1减到0，滚动完成position为0
              */
             override fun onPageScrolled(p0: Int, p1: Float, p2: Int) {
-                Log.e("scroll","position = "+p0)
-                Log.e("scroll","offset = "+p1)
                 indicator?.vpScroll(p0,p1)
             }
 
